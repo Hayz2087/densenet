@@ -318,7 +318,7 @@ def densenet169(BatchNorm, pretrained=True):
             if transstr + '3' in name:
                 name = name.replace('low_feature', 'end_feature')
                 new_state_dict[name] = v
-        model.load_state_dict(pretrained)#, strict=False
+        model.load_state_dict(pretrained, strict=False)
     return model
 
 def densenet201(BatchNorm, pretrained=True):
