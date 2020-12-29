@@ -5,12 +5,7 @@ from collections import OrderedDict
 from torch.nn import Module
 import torch.utils.model_zoo as model_zoo
 
-# model_urls = {
-#     'densenet121': '/home/hongz/PythoProjects/deeplabV3+camelyontop1/modeling/backbone/weights/densenet/densenet121-a639ec97.pth',
-#     'densenet169': '/home/hongz/PythoProjects/deeplabV3+camelyontop1/modeling/backbone/weights/densenet/densenet169-b2777c0a.pth',
-#     'densenet201': '/home/hongz/PythoProjects/deeplabV3+camelyontop1/modeling/backbone/weights/densenet/densenet201-c1103571.pth',
-#     'densenet161': '/home/hongz/PythoProjects/deeplabV3+camelyontop1/modeling/backbone/weights/densenet/densenet161-8d451a50.pth',
-# }
+
 model_urls = {
     'densenet121': 'https://download.pytorch.org/models/densenet121-a639ec97.pth',
     'densenet169': 'https://download.pytorch.org/models/densenet169-b2777c0a.pth',
@@ -101,12 +96,6 @@ class DenseNet(nn.Module):
             ('relu0', nn.ReLU(inplace=True)),
             ('pool0', nn.MaxPool2d(kernel_size=3, stride=2, padding=1))
         ]))
-        # self.low_feature = nn.Sequential(OrderedDict([
-        #     ('conv0', nn.Conv2d(3, num_init_features, kernel_size=3, stride=1, padding=1, bias=False)),  #
-        #     ('norm0', BatchNorm(num_init_features)),
-        #     ('relu0', nn.ReLU(inplace=True)),
-        #     ('pool0', nn.MaxPool2d(kernel_size=4, stride=4))
-        # ]))
         # denselyer=(6,12,24,16) densnet121
         # Middle_feature 1/16 size
         self.middle_feature = nn.Sequential()
