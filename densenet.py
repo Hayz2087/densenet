@@ -5,12 +5,6 @@ from collections import OrderedDict
 from torch.nn import Module
 import torch.utils.model_zoo as model_zoo
 
-# model_urls = {
-#     'densenet121': '/home/hongz/PythoProjects/deeplabV3+camelyontop1/modeling/backbone/weights/densenet/densenet121-a639ec97.pth',
-#     'densenet169': '/home/hongz/PythoProjects/deeplabV3+camelyontop1/modeling/backbone/weights/densenet/densenet169-b2777c0a.pth',
-#     'densenet201': '/home/hongz/PythoProjects/deeplabV3+camelyontop1/modeling/backbone/weights/densenet/densenet201-c1103571.pth',
-#     'densenet161': '/home/hongz/PythoProjects/deeplabV3+camelyontop1/modeling/backbone/weights/densenet/densenet161-8d451a50.pth',
-# }
 model_urls = {
     'densenet121': 'https://download.pytorch.org/models/densenet121-a639ec97.pth',
     'densenet169': 'https://download.pytorch.org/models/densenet169-b2777c0a.pth',
