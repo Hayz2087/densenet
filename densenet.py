@@ -230,6 +230,7 @@ def densenet121(BatchNorm, pretrained=True):
         blockstr = 'denseblock'
         transstr = 'transition'
         for k, v in pretrained.items():
+            name = k.replace('features', 'low_feature')
             new_state_dict[name] = v
         for k, v in new_state_dict.items():
             name = k
