@@ -250,7 +250,7 @@ def densenet121(BatchNorm, pretrained=True):
                     elif transstr + '3' in name:
                         name = name.replace('low_feature', 'end_feature')
             new_state_dict2[name] = v
-        model.load_state_dict(new_state_dict)
+        model.load_state_dict(new_state_dict2)
     return model
 #169-(6,12,32,32)  201-(6,12,48,32)  161-(6,12,36,24)
 def densenet161(BatchNorm, pretrained=True):
@@ -294,7 +294,7 @@ def densenet161(BatchNorm, pretrained=True):
                     elif transstr + '3' in name:
                         name = name.replace('low_feature', 'end_feature')
             new_state_dict2[name] = v
-        model.load_state_dict(new_state_dict)
+        model.load_state_dict(new_state_dict2)
     return model
 
 def densenet169(BatchNorm, pretrained=True):
@@ -382,7 +382,7 @@ def densenet201(BatchNorm, pretrained=True):
                     elif transstr + '3' in name:
                         name = name.replace('low_feature', 'end_feature')
             new_state_dict2[name] = v
-        model.load_state_dict(new_state_dict)
+        model.load_state_dict(new_state_dict2)
     return model
 
 if __name__ == '__main__':
